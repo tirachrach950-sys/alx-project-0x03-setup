@@ -1,3 +1,5 @@
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+
 interface ButtonProps {
   buttonLabel: string;
   buttonSize?: string;
