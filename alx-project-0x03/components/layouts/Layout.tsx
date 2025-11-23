@@ -1,12 +1,7 @@
-import type { LayoutProps } from "@/interface";
-
-import { ReactNode } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
-
-interface LayoutProps {
-  children: ReactNode;
-}
+import { LayoutProps } from '@/interface';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -19,10 +14,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
-// Move this interface to interface/index.ts
-import { ReactNode } from "react";
-
-export interface LayoutProps {
-  children: ReactNode;
-}
-
