@@ -1,16 +1,7 @@
-import type { ButtonProps } from "@/interface";
+import { ButtonProps } from '@/interface';
+import React from 'react';
 
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-
-interface ButtonProps {
-  buttonLabel: string;
-  buttonSize?: string;
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green';
-  action?: () => void;
-}
-
-const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
-
+const Button: React.FC<ButtonProps> = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }) => {
   const backgroundColorClass = buttonBackgroundColor ? {
     red: 'bg-red-500',
     blue: 'bg-blue-500',
@@ -21,19 +12,11 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
   return (
     <button
       onClick={action}
-      className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}
+      className={`${backgroundColorClass} ${buttonSize ?? ''} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}
     >
       {buttonLabel}
     </button>
-  )
-}
+  );
+};
 
 export default Button;
-// Move this interface to interface/index.ts
-export interface ButtonProps {
-  buttonLabel: string;
-  buttonSize?: string;
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green';
-  action?: () => void;
-}
-
