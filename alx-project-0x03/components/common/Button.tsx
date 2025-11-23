@@ -27,4 +27,11 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
 }
 
 export default Button;
+// Move this interface to interface/index.ts
+export interface ButtonProps {
+  buttonLabel: string;
+  buttonSize?: string;
+  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green';
+  action?: () => void;
+}
 
