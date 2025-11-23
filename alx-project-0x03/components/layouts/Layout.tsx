@@ -17,4 +17,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+// Move this interface to interface/index.ts
+import { ReactNode } from "react";
+
+export interface LayoutProps {
+  children: ReactNode;
+}
 
