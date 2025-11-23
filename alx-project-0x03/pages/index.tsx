@@ -1,4 +1,5 @@
 <h1> Welcome to Splash App </h1>
+import type { PageRouteProps } from "@/interface";
 
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
