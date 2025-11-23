@@ -1,3 +1,5 @@
+import type { ButtonProps } from "@/interface";
+
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 interface ButtonProps {
