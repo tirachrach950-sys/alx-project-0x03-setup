@@ -1,3 +1,4 @@
+<h1> Welcome to Splash App </h1>
 import React from 'react';
 import { useRouter } from 'next/router';
 import Button from '@/components/common/Button';
